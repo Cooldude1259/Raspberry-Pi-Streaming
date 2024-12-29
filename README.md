@@ -1,13 +1,17 @@
 # Raspberry-Pi-Streaming
 
 # Table Of Contents:
-[About](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#about)
+- [About](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#about)
 
-[Keep in mind](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#keep-in-mind)
+- [Keep in mind](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#keep-in-mind)
 
-[Downloading](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#downloading)
+- [Downloading](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#downloading)
 
-  [Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1:-downloading-the-files)
+  - [Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1:-downloading-the-files)
+
+  - [Method 1](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-1)
+
+  - [Method 2](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-2)
 
 
 ## About
@@ -22,3 +26,4 @@ When downloading the files, there are multiple methods.
 ### Method 1
 For this method, you are going to download the ZIP file. Above all of the code, click the green dropdown button that says code. At the bottom of the Dropdown, click Download ZIP. Now proceed to step 2.
 ### Method 2
+for this method, you are going to use the git command in your terminal.
