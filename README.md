@@ -69,6 +69,6 @@ Now to run the program, you need to run the videos-api.py file. An easy way I ha
 # Visiting the Site
 When you run the code in the terminal, there is a message on it saying:\
 127.0.0.1:5000\
-<raspberry-pi-ip>:5000\
+|raspberry-pi-ip|:5000\
 
-Where there is <raspberry-pi-ip> will be your raspberry pi's ip. to visit the site, just visit either of those two links. If you are not visiting the site on your pi, go to the link with your pi's ip.
+Where there is |raspberry-pi-ip| will be your raspberry pi's ip. to visit the site, just visit either of those two links. If you are not visiting the site on your pi, go to the link with your pi's ip.
