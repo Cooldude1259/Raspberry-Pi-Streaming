@@ -55,13 +55,13 @@ The program does not come with its own videos. You will therefore need to find y
 
 The Videos and thumbnails go into the Videos folder. The names don't matter as long as you remember them. The videos are to be in the MP4 format and the thumbnails are to be in the jpg or png format.
 
-In VidInfo, for every video, you are going to need to make a json file. The name of these files don't matter either, as long as it ends in .json. Only whats in them matters. The format is as follows:
+In VidInfo, for every video, you are going to need to make a json file. The name of these files don't matter either, as long as it ends in .json. Only whats in them matters. The format is as follows:\
 {\
   "title": "Example Video",\
   "path": "example_video.mp4",\
   "thumbnail": "example_thumbnail.jpg",\
   "description": "This is a sample video."\
-}\
+}
 
 ## Step 5: Running the Program
 Now to run the program, you need to run the videos-api.py file. An easy way I have is to open the terminal in the directory of the file and enter the command: ***python3 videos-api.py***.
@@ -69,6 +69,6 @@ Now to run the program, you need to run the videos-api.py file. An easy way I ha
 # Visiting the Site
 When you run the code in the terminal, there is a message on it saying:\
 127.0.0.1:5000\
-|raspberry-pi-ip|:5000\
+|raspberry-pi-ip|:5000
 
 Where there is |raspberry-pi-ip| will be your raspberry pi's ip. to visit the site, just visit either of those two links. If you are not visiting the site on your pi, go to the link with your pi's ip.
