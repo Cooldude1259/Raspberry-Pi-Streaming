@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            background-color: #1F1F1F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .card {
+            background-color: #1F1F1F;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            padding: 10px;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 10px;
+            background-color: #1F1F1F;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #CCCCCC;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+            z-index: 10;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .video-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: #121212;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Raspberry Pi Streaming</h1>
+    </div>
+    <div class="content" id="video-list">
+        <!-- Video cards will be populated here -->
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Raspberry Pi Streaming</p>
+    </div>
+
+    <script>
+        async function fetchVideoList() {
+            try {
+                const response = await fetch('/videos');
+                const videos = await response.json();
+                const videoList = document.getElementById('video-list');
+
+                videos.forEach(video => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = `/Thumbnails/${video.thumbnail}`;
+                    thumbnail.alt = `${video.title} thumbnail`;
+
+                    const title = document.createElement('div');
+                    title.className = 'card-title';
+                    title.textContent = video.title;
+
+                    card.appendChild(thumbnail);
+                    card.appendChild(title);
+                    card.addEventListener('click', () => {
+                        playVideo(video.path);
+                    });
+
+                    videoList.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error fetching video list:', error);
+            }
+        }
+
+        function playVideo(videoPath) {
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'video-container';
+
+            const backButton = document.createElement('button');
+            backButton.className = 'back-button';
+            backButton.textContent = '<-- Go Back(just reload)';
+            backButton.addEventListener('click', () => {
+                document.body.innerHTML = '';
+                document.body.appendChild(document.querySelector('.header'));
+                document.body.appendChild(document.querySelector('.content'));
+                document.body.appendChild(document.querySelector('.footer'));
+            });
+
+            const videoElement = document.createElement('video');
+            videoElement.src = `/Videos/${videoPath}`;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+
+            videoContainer.appendChild(videoElement);
+            videoContainer.appendChild(backButton);
+            document.body.innerHTML = '';
+            document.body.appendChild(videoContainer);
+        }
+
+        fetchVideoList();
+    </script>
+</body>
+</html>
