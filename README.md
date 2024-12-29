@@ -6,8 +6,8 @@
 [Keep in mind](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#keep-in-mind)
 
 [Downloading](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#downloading)
-|
-|_[Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1:-downloading-the-files)
+
+  [Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1:-downloading-the-files)
 
 
 ## About
