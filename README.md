@@ -44,10 +44,10 @@ You may notice that the files Videos.zip and VidInfo.zip are currently ZIP files
 
 ## Step 3: Downloading the Web Server
 You now need to get into the terminal and run some commands. The following are the commands you need to run:
-sudo apt update
-sudo apt install apache2 -y
+***sudo apt update***
+***sudo apt install apache2 -y*** 
 
-Run the command: sudo systemctl status apache2
+Run the command: ***sudo systemctl status apache2***
 to check that the server is running.
 
 ## Step 4: Find Videos
