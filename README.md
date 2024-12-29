@@ -7,11 +7,21 @@
 
 - [Downloading](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#downloading)
 
-  - [Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1:-downloading-the-files)
+  - [Step 1: Downloading the Files](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-1-downloading-the-files)
 
-  - [Method 1](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-1)
+    - [Method 1](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-1)
 
-  - [Method 2](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-2)
+    - [Method 2](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#method-2)
+
+  - [Step 2: File Preperation](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-2-file-preperation)
+ 
+  - [Step 3: Downloading the Web Server](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-3-downloading-the-web-server)
+ 
+  - [Step 4: Find Videos](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-4-find-videos)
+ 
+  - [Step 5: Running the Program](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#step-5-running-the-program)
+
+- [Visiting the Site](https://github.com/Cooldude1259/Raspberry-Pi-Streaming?tab=readme-ov-file#visiting-the-site)
 
 
 ## About
